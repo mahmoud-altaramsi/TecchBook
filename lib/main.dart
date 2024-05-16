@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'features/spalsh/presentions/view/spalsh_view.dart';
+import 'features/spalsh/presentions/view_models/views/spalsh_view.dart';
 
 void main() {
   runApp(const TechBook());
