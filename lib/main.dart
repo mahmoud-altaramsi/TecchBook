@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tech_book/constant.dart';
 
 import 'features/spalsh/presentions/view_models/views/spalsh_view.dart';
 
@@ -12,8 +13,12 @@ class TechBook extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
-      home: SplashView(),
+    return GetMaterialApp(
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: primaryColorScafold,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: const SplashView(),
     );
   }
 }
