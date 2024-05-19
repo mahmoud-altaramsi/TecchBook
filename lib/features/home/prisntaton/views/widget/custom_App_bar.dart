@@ -9,7 +9,7 @@ class CostumAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
+      padding: const EdgeInsets.only(top: 30, bottom: 15, left: 15, right: 15),
       child: Row(
         children: [
           Image.asset(
