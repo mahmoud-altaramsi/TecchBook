@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tech_book/features/home/prisntaton/views/widget/custom_list_view_body.dart';
+
 class FeaturedBookListVeiw extends StatelessWidget {
   const FeaturedBookListVeiw({super.key});
 
@@ -11,7 +12,7 @@ class FeaturedBookListVeiw extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10),
+            padding: EdgeInsets.symmetric(horizontal: 8),
             child: CustomListViweBody(),
           );
         },
