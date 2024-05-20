@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tech_book/constant.dart';
-
 import 'features/spalsh/presentions/view_models/views/spalsh_view.dart';
 
 void main() {
@@ -9,7 +8,9 @@ void main() {
 }
 
 class TechBook extends StatelessWidget {
-  const TechBook({super.key});
+  const TechBook({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
