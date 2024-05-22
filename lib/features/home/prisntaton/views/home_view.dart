@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tech_book/core/utils/styles.dart';
-import 'package:tech_book/features/home/prisntaton/views/widget/custom_list_view_body.dart';
 
 import 'widget/custom_App_bar.dart';
 import 'widget/feature_book_list_view.dart';
@@ -12,7 +12,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 23),
+        padding: EdgeInsets.symmetric(horizontal: 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -24,6 +24,9 @@ class HomeView extends StatelessWidget {
             Text(
               "Best Saller",
               style: Styles.titleMedium,
+            ),
+            SizedBox(
+              height: 20,
             ),
             BestSellerListView(),
           ],
@@ -39,6 +42,7 @@ class BestSellerListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
           height: 125,
@@ -56,6 +60,22 @@ class BestSellerListView extends StatelessWidget {
               ),
             ),
           ),
+        ),
+        const SizedBox(
+          width: 30,
+        ),
+        Column(
+          children: [
+            SizedBox(
+              width: MediaQuery.of(context).size.width * .5,
+              child: const Text(
+                "Harry Potter and the Goblet of Fire",
+                style: Styles.textStyle20,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+          ],
         ),
       ],
     );
