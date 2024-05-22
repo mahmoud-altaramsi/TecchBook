@@ -4,8 +4,8 @@ import 'package:tech_book/features/home/prisntaton/views/widget/books_reating.da
 
 import '../../../../../core/utils/styles.dart';
 
-class BestSellerListView extends StatelessWidget {
-  const BestSellerListView({super.key});
+class BestSellerListViewItems extends StatelessWidget {
+  const BestSellerListViewItems({super.key});
 
   @override
   Widget build(BuildContext context) {

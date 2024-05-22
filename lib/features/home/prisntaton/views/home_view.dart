@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:tech_book/core/utils/styles.dart';
 
 import 'widget/best_seller_list_view.dart';
@@ -12,27 +11,62 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 30),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CostumAppBar(),
-            FeaturedBookListVeiw(),
-            SizedBox(
-              height: 50,
+      body: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 30),
+                  child: CostumAppBar(),
+                ),
+                FeaturedBookListVeiw(),
+                SizedBox(
+                  height: 50,
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 30),
+                  child: Text(
+                    "Best Saller",
+                    style: Styles.titleMedium,
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                //
+              ],
             ),
-            Text(
-              "Best Saller",
-              style: Styles.titleMedium,
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 30),
+              child: BestSellerListView(),
             ),
-            SizedBox(
-              height: 20,
-            ),
-            BestSellerListView(),
-          ],
-        ),
+          ),
+        ],
       ),
+    );
+  }
+}
+
+class BestSellerListView extends StatelessWidget {
+  const BestSellerListView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      itemCount: 10,
+      shrinkWrap: true,
+      padding: EdgeInsets.zero,
+      physics: const NeverScrollableScrollPhysics(),
+      itemBuilder: (context, index) {
+        return const Padding(
+          padding: EdgeInsets.symmetric(vertical: 10),
+          child: BestSellerListViewItems(),
+        );
+      },
     );
   }
 }
