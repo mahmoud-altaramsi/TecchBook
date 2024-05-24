@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:tech_book/core/utils/styles.dart';
 import 'package:tech_book/features/home/prisntaton/views/widget/best_seller_list_view.dart';
 
-import 'widget/best_seller_list_view_items.dart';
 import 'widget/custom_App_bar.dart';
 import 'widget/feature_book_list_view.dart';
 
