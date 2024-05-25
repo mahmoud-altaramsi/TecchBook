@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tech_book/core/utils/styles.dart';
+import 'package:tech_book/features/home/prisntaton/views/widget/books_reating.dart';
 import 'package:tech_book/features/home/prisntaton/views/widget/custom_book_details_appbar.dart';
 import 'package:tech_book/features/home/prisntaton/views/widget/Custom_Book_List_View.dart';
 
@@ -16,9 +18,29 @@ class BookDetailsListViewBody extends StatelessWidget {
           children: [
             const CustomBookDetailsAppBar(),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: width * .17),
+              padding: EdgeInsets.symmetric(horizontal: width * .20),
               child: const CustomBookListView(),
-            )
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+            Text(
+              'The Jungle Book',
+              style: Styles.textStyle30.copyWith(
+                  fontWeight: FontWeight.w500,
+                  fontFamily: 'prat',
+                  color: Colors.white),
+            ),
+            Text(
+              'Rudyard Kipling',
+              style: Styles.textStyle20.copyWith(
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+           
+            const BooksReating(
+              mainAxisAlignment: MainAxisAlignment.center,
+            ),
           ],
         ),
       )),

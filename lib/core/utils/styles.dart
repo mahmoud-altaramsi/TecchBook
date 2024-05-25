@@ -20,5 +20,5 @@ abstract class Styles {
     color: Colors.grey,
   );
   static const textStyle16 =
-      TextStyle(fontSize: 20, fontWeight: FontWeight.w500);
+      TextStyle(fontSize: 16, fontWeight: FontWeight.w500);
 }
