@@ -16,18 +16,18 @@ class BookAction extends StatelessWidget {
               fontSize: 18,
               fontWeight: FontWeight.bold,
               text: '512#',
-              textColor: Colors.white,
+              textColor: Colors.black,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(12),
                 bottomLeft: Radius.circular(12),
               ),
-            ),
+            ), 
           ),
           Expanded(
             child: CustomBottom(
               backgroundColor: Color(0xffEF8262),
               fontSize: 18,
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.w500,
               text: 'free perview',
               textColor: Colors.white,
               borderRadius: BorderRadius.only(

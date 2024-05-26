@@ -5,6 +5,7 @@ import 'package:tech_book/features/home/prisntaton/views/widget/book_action.dart
 import 'package:tech_book/features/home/prisntaton/views/widget/books_reating.dart';
 import 'package:tech_book/features/home/prisntaton/views/widget/custom_book_details_appbar.dart';
 import 'package:tech_book/features/home/prisntaton/views/widget/Custom_Book_List_View.dart';
+import 'package:tech_book/features/home/prisntaton/views/widget/similar_book_list_veiw.dart';
 
 class BookDetailsListViewBody extends StatelessWidget {
   const BookDetailsListViewBody({super.key});
@@ -44,10 +45,28 @@ class BookDetailsListViewBody extends StatelessWidget {
             const SizedBox(
               height: 37,
             ),
-            const BookAction()
+            const BookAction(),
+            const SizedBox(
+              height: 30,
+            ),
+            Align(
+              alignment: Alignment.topLeft,
+              child: Text(
+                "You can also like",
+                style: Styles.textStyle16.copyWith(color: Colors.white),
+              ),
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            const SimilarBookListView(),
+            const SizedBox(
+              height: 40,
+            ),
           ],
         ),
       )),
     );
   }
 }
+
