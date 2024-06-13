@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:tech_book/features/home/prisntaton/views/widget/book_action.dart';
 
@@ -44,5 +43,3 @@ class BookDetailsSections extends StatelessWidget {
     );
   }
 }
-
-
