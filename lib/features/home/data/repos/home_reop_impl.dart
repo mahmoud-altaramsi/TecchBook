@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 import 'package:tech_book/core/errors/failure.dart';
 import 'package:tech_book/core/utils/api_service.dart';
 import 'package:tech_book/features/home/data/models/book_model/book_model.dart';
@@ -19,7 +20,10 @@ class HomeReboImpl implements HomeRepo {
       }
       return right(books);
     } catch (e) {
-      return left(ServiseFailure());
+      if (e is DioException) {
+        return left(ServiseFailure.fromDioException(e));
+      }
+      return left(ServiseFailure(e.toString()));
     }
   }
 
