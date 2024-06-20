@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 import 'package:tech_book/constant.dart';
 import 'package:tech_book/core/utils/app_routers.dart';
 import 'package:tech_book/core/utils/service_locator.dart';
@@ -23,9 +22,13 @@ class TechBook extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-            create: (context) => NewstBooksCubit(getIt.get<HomeReboImpl>())),
+            create: (context) => NewstBooksCubit(
+                  getIt.get<HomeReboImpl>(),
+                )),
         BlocProvider(
-            create: (context) => FeaturedBooksCubit(getIt.get<HomeReboImpl>())),
+          create: (context) => FeaturedBooksCubit(getIt.get<HomeReboImpl>())
+            ..fetchFeaturedBooks(),
+        ),
       ],
       child: MaterialApp.router(
         routerConfig: AppRouter.router,
