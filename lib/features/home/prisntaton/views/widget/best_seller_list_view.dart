@@ -19,7 +19,7 @@ class BestSellerListView extends StatelessWidget {
       builder: (context, state) {
         if (state is NewstBooksSuccesse) {
           return ListView.builder(
-            itemCount: 10,
+            itemCount: state.books.length,
             padding: EdgeInsets.zero,
             physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {

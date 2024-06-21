@@ -35,6 +35,8 @@ class BookDetailsSections extends StatelessWidget {
               .copyWith(fontWeight: FontWeight.w500, color: Colors.grey),
         ),
         const BooksReating(
+          count: 22,
+          reating: 4,
           mainAxisAlignment: MainAxisAlignment.center,
         ),
         const SizedBox(

@@ -5,8 +5,13 @@ import '../../../../../core/utils/styles.dart';
 
 class BooksReating extends StatelessWidget {
   const BooksReating(
-      {super.key, this.mainAxisAlignment = MainAxisAlignment.start});
+      {super.key,
+      this.mainAxisAlignment = MainAxisAlignment.start,
+      required this.reating,
+      required this.count});
   final MainAxisAlignment mainAxisAlignment;
+  final int reating;
+  final int count;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -20,15 +25,15 @@ class BooksReating extends StatelessWidget {
         const SizedBox(
           width: 6.5,
         ),
-        const Text(
-          "4.5",
+        Text(
+          reating.toString(),
           style: Styles.textStyle16,
         ),
         const SizedBox(
           width: 5,
         ),
         Text(
-          "(512)",
+          "($count)",
           style: Styles.textStyle16.copyWith(color: Colors.grey),
         ),
       ],

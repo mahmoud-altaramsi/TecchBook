@@ -33,8 +33,8 @@ class BestSellerListViewItems extends StatelessWidget {
             children: [
               SizedBox(
                 width: MediaQuery.of(context).size.width * .5,
-                child: const Text(
-                  "Harry Potter and the Goblet of Fire",
+                child: Text(
+                  bookModel.volumeInfo.title!,
                   style: Styles.textStyle20,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
@@ -43,21 +43,24 @@ class BestSellerListViewItems extends StatelessWidget {
               const SizedBox(
                 height: 3,
               ),
-              const Text(
-                "J.K. Rowling",
-                style: Styles.textStyle14,
+              Text(
+                bookModel.volumeInfo.authors![0],
+                style: Styles.textStyle16,
               ),
               const SizedBox(
                 height: 3,
               ),
-              const Row(
+              Row(
                 children: [
-                  Text(
-                    "19.99 €",
+                  const Text(
+                    "Free",
                     style: Styles.textStyle20,
                   ),
-                  Spacer(),
-                  BooksReating()
+                  const Spacer(),
+                  BooksReating(
+                    reating: bookModel.volumeInfo.pageCount ?? 512,
+                    count: bookModel.volumeInfo.pageCount ?? 2,
+                  )
                 ],
               ),
             ],
