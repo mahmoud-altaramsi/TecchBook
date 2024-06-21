@@ -15,8 +15,9 @@ final class NewstBooksFailuer extends NewstBooksState {
   const NewstBooksFailuer(this.errMasseg);
 }
 
-final class NewstBooksSuccesse extends NewstBooksState {
-  const NewstBooksSuccesse(List<BookModel> books);
+class NewstBooksSuccesse extends NewstBooksState {
+  final List<BookModel> books;
+  const NewstBooksSuccesse(this.books);
 }
 
 final class NewstBooksLoading extends NewstBooksState {}

@@ -24,7 +24,7 @@ class TechBook extends StatelessWidget {
         BlocProvider(
             create: (context) => NewstBooksCubit(
                   getIt.get<HomeReboImpl>(),
-                )),
+                )..fetchNewsBooks()),
         BlocProvider(
           create: (context) => FeaturedBooksCubit(getIt.get<HomeReboImpl>())
             ..fetchFeaturedBooks(),

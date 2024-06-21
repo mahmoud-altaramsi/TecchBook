@@ -7,9 +7,8 @@ class CustomBookListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      
       child: AspectRatio(
-          aspectRatio: 2.5 / 4,
+          aspectRatio: 2.8 / 4,
           child: CachedNetworkImage(
             imageUrl: imageUrl,
             placeholder: (context, url) => const Center(
