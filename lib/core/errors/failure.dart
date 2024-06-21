@@ -17,10 +17,11 @@ class ServiseFailure extends Failure {
         return ServiseFailure("receive Timeout with api servier");
       case DioExceptionType.badCertificate:
         return ServiseFailure("bad Certificate Timeout with api servier");
-
+      case DioExceptionType.connectionTimeout:
+        return ServiseFailure("errMasseg");
       case DioExceptionType.badResponse:
         return ServiseFailure.fromResponse(
-            dioException.response!.statusCode!, dioException.response!.data!);
+            dioException.response!.statusCode!, dioException.response!.data);
       case DioExceptionType.cancel:
         return ServiseFailure('Request to api server was cancled');
 
